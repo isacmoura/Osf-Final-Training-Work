@@ -1,0 +1,30 @@
+{
+  "name": "final_project_osf",
+  "version": "1.0.0",
+  "description": "Final project for the internship program of OSF",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/isacmoura/osf_final_work.git"
+  },
+  "keywords": [
+    "Express",
+    "Node",
+    "internship"
+  ],
+  "author": "Isac Moura <contatoisacmoura@outlook.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/isacmoura/osf_final_work/issues"
+  },
+  "homepage": "https://gitlab.com/isacmoura/osf_final_work#README",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "request": "^2.88.0"
+  }
+}
