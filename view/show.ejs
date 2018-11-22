@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>List</title>
+    <title>Show User</title>
     <link rel="stylesheet" href="../style/bootstrap.min.css">
 </head>
 
@@ -13,7 +13,7 @@
     <main role="main">
         <div class="jumbotron">
             <div class="container">
-                <h1 class="display-3">List</h1>
+                <h1 class="display-3">Show User</h1>
             </div>
         </div>
 
@@ -23,27 +23,28 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">name</th>
+                                <th scope="col">Name</th>
                                 <th scope="col">Email</th>
-                                <th scope="col">Actions</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">Phone</th>
+
                             </tr>
                         </thead>
                         <tbody>
-                            <% contacts.data.forEach(function(contact){ %>
                             <tr>
                                 <td>
-                                    <%= contact.name %>
+                                    <%= user.name %>
                                 </td>
                                 <td>
-                                    <%= contact.email %>
+                                    <%= user.email %>
                                 </td>
                                 <td>
-                                    <a href="" class="btn btn-warning">Edit</a>
-                                    <a href="" class="btn btn-danger">Delete</a>
+                                    <%= user.gender %>
                                 </td>
-
+                                <td>
+                                    <%= user.phone %>
+                                </td>
                             </tr>
-                            <% }); %>
                         </tbody>
 
 

@@ -51,6 +51,22 @@ app.post('/register', function (req, res) {
 
 });
 
+app.get('/search', function(req, res) {
+    res.render('search');
+});
+
+app.get('/searchUser', function(req, res) {
+    var id = req.query.id;
+
+    request.get(`https://f5zg6v0z92.execute-api.us-east-1.amazonaws.com/dev/contacts/${id}`, function (error, response, body) {
+        
+        res.render('show', {
+            user: JSON.parse(body)
+        });
+        console.log("Body" + body);
+    });
+});
+
 app.listen(3030, function() {
     console.log('Running on the port 3030');
 });
