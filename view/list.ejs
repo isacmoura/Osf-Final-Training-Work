@@ -29,7 +29,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <% contacts.data.forEach(function(contact){ %>
+                            <% contacts.forEach(function(contact){ %>
                             <tr>
                                 <td>
                                     <%= contact.name %>
@@ -38,8 +38,8 @@
                                     <%= contact.email %>
                                 </td>
                                 <td>
-                                    <a href="" class="btn btn-warning">Edit</a>
-                                    <a href="" class="btn btn-danger">Delete</a>
+                                    <a href="/update/<%=contact._id%>" class="btn btn-warning">Update</a>
+                                    <a href="/delete/<%=contact._id%>" class="btn btn-danger">Delete</a>
                                 </td>
 
                             </tr>

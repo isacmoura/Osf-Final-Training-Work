@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update</title>
+    <link rel="stylesheet" href="../style/bootstrap.min.css">
+</head>
+
+<body>
+    <main role="main">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <img src="../img/osf.png" class="img-fluid rounded mx-auto d-block m-3">
+                <h1 class="display-3 text-center">Update form</h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4"></div>
+                <div class="col-md-4 col-md-offset-4">
+                    <form action="/update" method="POST">
+                        <div class="form-group">
+                            <input type="hidden" value="<%= user._id %>" name="id">
+                            <label for="Name">Name</label>
+                            <input type="text" name="name" value="<%= user.name %>" required class="form-control mb-3">
+
+                            <label for="Email">Email</label>
+                            <input type="email" name="email" value="<%= user.email %>" required class="form-control mb-3">
+
+                            <label for="Gender">Gender</label>
+                            <select name="gender" required class="form-control mb-3">
+                                <%
+                                var options = ["", "male", "female", "other"];
+                                for (var i = 0; i < options.length; i++) {
+                                    var selected = (user.gender == options[i]) ? "selected" : "";
+                                %>
+                                <option value="<%=options[ i ] %>" <%=selected %>><%=options[i]%></option>
+                                <%}%>
+                            </select>
+
+                            <label for="Phone">Phone</label>
+                            <input type="text" name="phone" value="<%= user.email %>" required class="form-control mb-3">
+
+                            <button type="submit" class="btn btn-success">Update Contact</button>
+
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4 col-md-offset-4"></div>
+
+            </div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
